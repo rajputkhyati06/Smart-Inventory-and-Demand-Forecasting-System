@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartStock AI — Merchant Inventory Decision Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- TOP NAVIGATION BAR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="brand">
+                <div class="logo-icon">📦</div>
+                <div>
+                    <h1 class="brand-title">SmartStock <span class="ai-badge">AI COPILOT</span></h1>
+                    <p class="brand-subtitle">Autonomous Inventory & Demand Forecasting System | RVIT Bijnor</p>
+                </div>
+            </div>
+            <div class="nav-right">
+                <span class="store-tag">🏪 Store: <strong id="headerStoreName">Rajput Electronics & Retail</strong></span>
+                <button class="btn btn-outline" id="loadDemoBtn">⚡ Load 25 Sample SKUs</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="main-wrapper">
+
+        <!-- TOP KPI CARDS -->
+        <section class="kpi-grid">
+            <div class="kpi-card">
+                <div class="kpi-icon red-bg">🚨</div>
+                <div>
+                    <div class="kpi-label">Critical Red Alerts</div>
+                    <div class="kpi-value text-red" id="kpiRedCount">0</div>
+                    <div class="kpi-hint">Stock <= Reorder Point</div>
+                </div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-icon green-bg">✅</div>
+                <div>
+                    <div class="kpi-label">Healthy Inventory</div>
+                    <div class="kpi-value text-green" id="kpiGreenCount">0</div>
+                    <div class="kpi-hint">Sufficient Stock Buffer</div>
+                </div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-icon blue-bg">📦</div>
+                <div>
+                    <div class="kpi-label">Total SKUs Monitored</div>
+                    <div class="kpi-value text-blue" id="kpiTotalCount">0</div>
+                    <div class="kpi-hint">Active Product Lines</div>
+                </div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-icon purple-bg">💰</div>
+                <div>
+                    <div class="kpi-label">Total Stock Asset Value</div>
+                    <div class="kpi-value text-purple" id="kpiStockValue">₹0.00</div>
+                    <div class="kpi-hint">Warehouse Capital</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TWO-COLUMN WORKSPACE: LEFT (FORM WIZARD) | RIGHT (DECISION ENGINE CARD) -->
+        <section class="workspace-grid">
+            
+            <!-- LEFT COLUMN: DUKAANDAAR INTAKE FORM -->
+            <div class="glass-panel">
+                <div class="panel-header">
+                    <h2>🛒 Dukandaar Stock Input Wizard</h2>
+                    <p>Enter an item's daily movement to let the algorithm compute the exact replenishment decision.</p>
+                </div>
+
+                <form id="stockForm" class="stock-form">
+                    <div class="form-group">
+                        <label for="prodName">Product / Item Name</label>
+                        <input type="text" id="prodName" placeholder="e.g. 65W GaN Fast Charger" required value="65W GaN Fast Charger">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="skuCode">SKU Code</label>
+                            <input type="text" id="skuCode" placeholder="SKU-MOB-001" required value="SKU-MOB-001">
+                        </div>
+                        <div class="form-group">
+                            <label for="category">Category</label>
+                            <select id="category">
+                                <option value="Mobile Accessories">Mobile Accessories</option>
+                                <option value="Computer Peripherals">Computer Peripherals</option>
+                                <option value="Audio Devices">Audio Devices</option>
+                                <option value="Wearables & Fitness">Wearables & Fitness</option>
+                                <option value="Smart Home">Smart Home</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="currentStock">Current Stock on Hand (Units)</label>
+                            <input type="number" id="currentStock" min="0" value="12" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="leadTime">Supplier Lead Time (Days)</label>
+                            <input type="number" id="leadTime" min="1" max="60" value="5" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="slider-header">
+                            <label for="dailySales">Expected Daily Sales: <span id="dailySalesVal" class="slider-badge">10 units/day</span></label>
+                        </div>
+                        <input type="range" id="dailySales" min="1" max="50" value="10" class="slider">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="unitCost">Unit Cost Price (₹)</label>
+                            <input type="number" id="unitCost" min="1" value="650" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sellingPrice">Selling Price (₹)</label>
+                            <input type="number" id="sellingPrice" min="1" value="1199" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="supplierName">Assigned Supplier</label>
+                        <input type="text" id="supplierName" value="TechLogix Components Pvt Ltd" required>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" id="calcBtn" class="btn btn-primary">⚡ Compute Real-Time Decision</button>
+                        <button type="submit" class="btn btn-secondary">+ Add Item to Catalog</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- RIGHT COLUMN: REAL-TIME DECISION ENGINE RESULT CARD -->
+            <div class="glass-panel" id="decisionPanel">
+                <div class="panel-header">
+                    <h2>🧠 Algorithmic Decision Engine</h2>
+                    <p>Real-time calculation based on Safety Stock & Reorder Point (ROP) formulas.</p>
+                </div>
+
+                <!-- LIVE DECISION BANNER -->
+                <div class="decision-banner banner-red" id="decisionBanner">
+                    <div class="banner-icon" id="bannerIcon">🚨</div>
+                    <div>
+                        <h3 id="bannerTitle">CRITICAL RED ALERT: RESTOCK IMMEDIATELY!</h3>
+                        <p id="bannerDesc">Current inventory will run out in <strong>1.2 days</strong> before a new supplier delivery can arrive!</p>
+                    </div>
+                </div>
+
+                <!-- MATHEMATICAL OUTPUT TILES -->
+                <div class="metrics-output-grid">
+                    <div class="metric-tile">
+                        <span class="m-label">Calculated Safety Stock (SS)</span>
+                        <span class="m-val" id="resSafetyStock">12 Units</span>
+                        <span class="m-sub">Formula: 1.65 × σd × √L</span>
+                    </div>
+                    <div class="metric-tile">
+                        <span class="m-label">Reorder Point (ROP)</span>
+                        <span class="m-val text-blue" id="resROP">62 Units</span>
+                        <span class="m-sub">Formula: (d × L) + SS</span>
+                    </div>
+                    <div class="metric-tile">
+                        <span class="m-label">Stock Deficit</span>
+                        <span class="m-val text-red" id="resDeficit">-50 Units</span>
+                        <span class="m-sub">Current Stock - ROP</span>
+                    </div>
+                    <div class="metric-tile">
+                        <span class="m-label">Days of Stock Left</span>
+                        <span class="m-val text-amber" id="resDaysLeft">1.2 Days</span>
+                        <span class="m-sub">Current Stock / Daily Sales</span>
+                    </div>
+                </div>
+
+                <!-- ACTION RECOMMENDATION BOX -->
+                <div class="recommendation-box">
+                    <h4>💡 Actionable Recommendation for Dukandaar:</h4>
+                    <p id="recommendationText">Place a replenishment purchase order for <strong>80 units</strong> with <strong>TechLogix Components Pvt Ltd</strong> today to avoid losing ₹59,950 in customer sales.</p>
+                    
+                    <div class="rec-financials">
+                        <div>Estimated Investment Needed: <strong id="recTotalCost" class="text-blue">₹52,000.00</strong></div>
+                        <div>Expected Retail Turnover: <strong id="recTotalRev" class="text-green">₹95,920.00</strong></div>
+                    </div>
+                </div>
+
+                <div class="panel-footer">
+                    <button class="btn btn-success" id="exportPoBtn">📄 Download Supplier Purchase Order (.xlsx)</button>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- BOTTOM SECTION: STORE INVENTORY CATALOG TABLE -->
+        <section class="glass-panel catalog-section">
+            <div class="catalog-header">
+                <div>
+                    <h2>📋 Live Store Inventory & Reorder Monitoring</h2>
+                    <p>All catalog products actively evaluated by the demand forecasting engine.</p>
+                </div>
+                <div class="catalog-filters">
+                    <button class="filter-chip active" data-filter="all">All SKUs</button>
+                    <button class="filter-chip chip-red" data-filter="RED">🔴 Critical Red</button>
+                    <button class="filter-chip chip-green" data-filter="GREEN">🟢 Healthy Green</button>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="catalog-table" id="catalogTable">
+                    <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>SKU Code</th>
+                            <th>Product Name</th>
+                            <th>Category</th>
+                            <th>Current Stock</th>
+                            <th>ROP Threshold</th>
+                            <th>Suggested Reorder</th>
+                            <th>Unit Cost</th>
+                            <th>Supplier</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="catalogTableBody">
+                        <!-- Populated dynamically via JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="app-footer">
+        <p><strong>Smart Inventory & Demand Forecasting System</strong> | Developed by Khyati Rajput, Kashish Tyagi, Aaditya Yadav & Aksha Parveen</p>
+        <p>Department of Computer Science & Engineering | RV Institute of Technology, Bijnor (Affiliated to AKTU Lucknow)</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

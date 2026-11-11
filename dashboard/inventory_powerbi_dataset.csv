@@ -1,0 +1,51 @@
+SKU Code,Product Name,Category,Supplier Name,Supplier Lead Time (Days),Warehouse,Warehouse City,Current Stock Level,Safety Stock Buffer,Reorder Point (ROP),Unit Cost Price (INR),Unit Selling Price (INR),Holding Asset Value (INR),Stock Health Status,Suggested Reorder Qty
+SKU-MOB-001,65W GaN Fast Charger,Mobile Accessories,TechLogix Components Pvt Ltd,4,Northern Hub Warehouse,Bijnor,14,22,66,650,1199,9100.0,CRITICAL RED,132
+SKU-MOB-001,65W GaN Fast Charger,Mobile Accessories,TechLogix Components Pvt Ltd,4,Central Distribution Center,New Delhi,4,20,63,650,1199,2600.0,CRITICAL RED,139
+SKU-MOB-002,Braided USB-C to C Cable (2m),Mobile Accessories,TechLogix Components Pvt Ltd,4,Northern Hub Warehouse,Bijnor,13,26,81,140,349,1820.0,CRITICAL RED,218
+SKU-MOB-002,Braided USB-C to C Cable (2m),Mobile Accessories,TechLogix Components Pvt Ltd,4,Central Distribution Center,New Delhi,8,17,64,140,349,1120.0,CRITICAL RED,206
+SKU-MOB-003,20000mAh Power Bank (22.5W),Mobile Accessories,Metro Digital Supply Corp,5,Northern Hub Warehouse,Bijnor,47,26,87,950,1699,44650.0,CRITICAL RED,100
+SKU-MOB-003,20000mAh Power Bank (22.5W),Mobile Accessories,Metro Digital Supply Corp,5,Central Distribution Center,New Delhi,35,21,76,950,1699,33250.0,CRITICAL RED,101
+SKU-MOB-004,MagSafe Car Mount Holder,Mobile Accessories,Alpha Peripheral Traders,3,Northern Hub Warehouse,Bijnor,200,14,46,280,699,56000.0,HEALTHY GREEN,0
+SKU-MOB-004,MagSafe Car Mount Holder,Mobile Accessories,Alpha Peripheral Traders,3,Central Distribution Center,New Delhi,191,16,49,280,699,53480.0,HEALTHY GREEN,0
+SKU-MOB-005,3-in-1 Wireless Charging Stand,Mobile Accessories,Metro Digital Supply Corp,5,Northern Hub Warehouse,Bijnor,135,22,81,850,1599,114750.0,HEALTHY GREEN,0
+SKU-MOB-005,3-in-1 Wireless Charging Stand,Mobile Accessories,Metro Digital Supply Corp,5,Central Distribution Center,New Delhi,227,26,98,850,1599,192950.0,HEALTHY GREEN,0
+SKU-CMP-001,Wireless Ergonomic Mouse,Computer Peripherals,Apex Electronics & Hardware,7,Northern Hub Warehouse,Bijnor,186,39,136,420,899,78120.0,HEALTHY GREEN,0
+SKU-CMP-001,Wireless Ergonomic Mouse,Computer Peripherals,Apex Electronics & Hardware,7,Central Distribution Center,New Delhi,314,28,116,420,899,131880.0,HEALTHY GREEN,0
+SKU-CMP-002,RGB Mechanical Keyboard (Blue Switch),Computer Peripherals,Apex Electronics & Hardware,7,Northern Hub Warehouse,Bijnor,10,25,114,1250,2499,12500.0,CRITICAL RED,149
+SKU-CMP-002,RGB Mechanical Keyboard (Blue Switch),Computer Peripherals,Apex Electronics & Hardware,7,Central Distribution Center,New Delhi,10,24,107,1250,2499,12500.0,CRITICAL RED,142
+SKU-CMP-003,1080p FHD Pro Webcam,Computer Peripherals,Alpha Peripheral Traders,3,Northern Hub Warehouse,Bijnor,46,18,54,780,1499,35880.0,CRITICAL RED,58
+SKU-CMP-003,1080p FHD Pro Webcam,Computer Peripherals,Alpha Peripheral Traders,3,Central Distribution Center,New Delhi,36,17,50,780,1499,28080.0,CRITICAL RED,64
+SKU-CMP-004,7-in-1 Aluminum USB-C Hub,Computer Peripherals,TechLogix Components Pvt Ltd,4,Northern Hub Warehouse,Bijnor,172,17,64,620,1299,106640.0,HEALTHY GREEN,0
+SKU-CMP-004,7-in-1 Aluminum USB-C Hub,Computer Peripherals,TechLogix Components Pvt Ltd,4,Central Distribution Center,New Delhi,316,19,65,620,1299,195920.0,HEALTHY GREEN,0
+SKU-CMP-005,Extended Desk Mat (900x400mm),Computer Peripherals,Alpha Peripheral Traders,3,Northern Hub Warehouse,Bijnor,139,20,57,210,499,29190.0,HEALTHY GREEN,0
+SKU-CMP-005,Extended Desk Mat (900x400mm),Computer Peripherals,Alpha Peripheral Traders,3,Central Distribution Center,New Delhi,183,19,54,210,499,38430.0,HEALTHY GREEN,0
+SKU-AUD-001,TWS Earbuds with ANC (Active Noise),Audio Devices,Nexa Audio & Wearables Ltd,10,Northern Hub Warehouse,Bijnor,15,27,135,1100,2299,16500.0,CRITICAL RED,190
+SKU-AUD-001,TWS Earbuds with ANC (Active Noise),Audio Devices,Nexa Audio & Wearables Ltd,10,Central Distribution Center,New Delhi,5,27,143,1100,2299,5500.0,CRITICAL RED,208
+SKU-AUD-002,Over-Ear Wireless Headphones,Audio Devices,Nexa Audio & Wearables Ltd,10,Northern Hub Warehouse,Bijnor,43,39,157,1450,2999,62350.0,CRITICAL RED,154
+SKU-AUD-002,Over-Ear Wireless Headphones,Audio Devices,Nexa Audio & Wearables Ltd,10,Central Distribution Center,New Delhi,34,35,151,1450,2999,49300.0,CRITICAL RED,157
+SKU-AUD-003,Portable Bluetooth Speaker (10W),Audio Devices,Metro Digital Supply Corp,5,Northern Hub Warehouse,Bijnor,300,26,86,580,1199,174000.0,HEALTHY GREEN,0
+SKU-AUD-003,Portable Bluetooth Speaker (10W),Audio Devices,Metro Digital Supply Corp,5,Central Distribution Center,New Delhi,308,25,84,580,1199,178640.0,HEALTHY GREEN,0
+SKU-AUD-004,Gaming Headset with Boom Mic,Audio Devices,Nexa Audio & Wearables Ltd,10,Northern Hub Warehouse,Bijnor,112,28,138,820,1699,91840.0,CRITICAL RED,76
+SKU-AUD-004,Gaming Headset with Boom Mic,Audio Devices,Nexa Audio & Wearables Ltd,10,Central Distribution Center,New Delhi,304,40,168,820,1699,249280.0,HEALTHY GREEN,0
+SKU-AUD-005,Collar Clip-on Lavalier Mic,Audio Devices,Alpha Peripheral Traders,3,Northern Hub Warehouse,Bijnor,130,21,57,180,499,23400.0,HEALTHY GREEN,0
+SKU-AUD-005,Collar Clip-on Lavalier Mic,Audio Devices,Alpha Peripheral Traders,3,Central Distribution Center,New Delhi,220,22,56,180,499,39600.0,HEALTHY GREEN,0
+SKU-WER-001,Smart Fitness Tracker Band 7,Wearables & Fitness,Nexa Audio & Wearables Ltd,10,Northern Hub Warehouse,Bijnor,5,33,148,850,1799,4250.0,CRITICAL RED,208
+SKU-WER-001,Smart Fitness Tracker Band 7,Wearables & Fitness,Nexa Audio & Wearables Ltd,10,Central Distribution Center,New Delhi,4,38,158,850,1799,3400.0,CRITICAL RED,219
+SKU-WER-002,AMOLED Bluetooth Calling Smartwatch,Wearables & Fitness,Zenith Smart Devices LLP,12,Northern Hub Warehouse,Bijnor,34,27,150,1600,3299,54400.0,CRITICAL RED,166
+SKU-WER-002,AMOLED Bluetooth Calling Smartwatch,Wearables & Fitness,Zenith Smart Devices LLP,12,Central Distribution Center,New Delhi,49,33,168,1600,3299,78400.0,CRITICAL RED,169
+SKU-WER-003,Silicone Magnetic Watch Strap (22mm),Wearables & Fitness,Alpha Peripheral Traders,3,Northern Hub Warehouse,Bijnor,258,17,51,95,299,24510.0,HEALTHY GREEN,0
+SKU-WER-003,Silicone Magnetic Watch Strap (22mm),Wearables & Fitness,Alpha Peripheral Traders,3,Central Distribution Center,New Delhi,165,16,51,95,299,15675.0,HEALTHY GREEN,0
+SKU-WER-004,Stainless Steel Mesh Loop Band,Wearables & Fitness,Alpha Peripheral Traders,3,Northern Hub Warehouse,Bijnor,202,19,56,160,449,32320.0,HEALTHY GREEN,0
+SKU-WER-004,Stainless Steel Mesh Loop Band,Wearables & Fitness,Alpha Peripheral Traders,3,Central Distribution Center,New Delhi,185,22,55,160,449,29600.0,HEALTHY GREEN,0
+SKU-WER-005,Smart Sports GPS Watch,Wearables & Fitness,Zenith Smart Devices LLP,12,Northern Hub Warehouse,Bijnor,135,39,187,2800,5499,378000.0,CRITICAL RED,82
+SKU-WER-005,Smart Sports GPS Watch,Wearables & Fitness,Zenith Smart Devices LLP,12,Central Distribution Center,New Delhi,304,40,178,2800,5499,851200.0,HEALTHY GREEN,0
+SKU-SMT-001,Smart WiFi LED Bulb (9W RGB),Smart Home & Lighting,Zenith Smart Devices LLP,12,Northern Hub Warehouse,Bijnor,48,33,167,240,599,11520.0,CRITICAL RED,239
+SKU-SMT-001,Smart WiFi LED Bulb (9W RGB),Smart Home & Lighting,Zenith Smart Devices LLP,12,Central Distribution Center,New Delhi,34,36,177,240,599,8160.0,CRITICAL RED,263
+SKU-SMT-002,16A Smart Wi-Fi Plug with Energy Monitor,Smart Home & Lighting,Zenith Smart Devices LLP,12,Northern Hub Warehouse,Bijnor,296,41,197,380,899,112480.0,HEALTHY GREEN,0
+SKU-SMT-002,16A Smart Wi-Fi Plug with Energy Monitor,Smart Home & Lighting,Zenith Smart Devices LLP,12,Central Distribution Center,New Delhi,312,37,166,380,899,118560.0,HEALTHY GREEN,0
+SKU-SMT-003,RGB Smart LED Light Strip (5m),Smart Home & Lighting,Metro Digital Supply Corp,5,Northern Hub Warehouse,Bijnor,118,26,86,450,999,53100.0,HEALTHY GREEN,0
+SKU-SMT-003,RGB Smart LED Light Strip (5m),Smart Home & Lighting,Metro Digital Supply Corp,5,Central Distribution Center,New Delhi,224,27,95,450,999,100800.0,HEALTHY GREEN,0
+SKU-SMT-004,Motion Sensor Night Light,Smart Home & Lighting,TechLogix Components Pvt Ltd,4,Northern Hub Warehouse,Bijnor,202,28,80,130,349,26260.0,HEALTHY GREEN,0
+SKU-SMT-004,Motion Sensor Night Light,Smart Home & Lighting,TechLogix Components Pvt Ltd,4,Central Distribution Center,New Delhi,279,23,70,130,349,36270.0,HEALTHY GREEN,0
+SKU-SMT-005,Smart IR Universal Remote Blaster,Smart Home & Lighting,Zenith Smart Devices LLP,12,Northern Hub Warehouse,Bijnor,274,34,155,390,799,106860.0,HEALTHY GREEN,0
+SKU-SMT-005,Smart IR Universal Remote Blaster,Smart Home & Lighting,Zenith Smart Devices LLP,12,Central Distribution Center,New Delhi,184,46,192,390,799,71760.0,CRITICAL RED,68
